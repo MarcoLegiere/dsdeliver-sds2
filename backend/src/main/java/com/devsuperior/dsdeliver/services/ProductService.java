@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.dsdeliver.Repositories.ProductReposity;
+import com.devsuperior.dsdeliver.Repositories.ProductRepository;
 import com.devsuperior.dsdeliver.dto.ProductDTO;
 import com.devsuperior.dsdeliver.entities.Product;
 
@@ -15,7 +15,7 @@ import com.devsuperior.dsdeliver.entities.Product;
 public class ProductService {
 	
 	@Autowired
-	private ProductReposity repository;
+	private ProductRepository repository;
 	
 	@Transactional(readOnly = true)
 	public List<ProductDTO> findAll() {
